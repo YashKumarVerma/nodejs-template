@@ -1,6 +1,6 @@
 # :dog2: Cerberus
 
-A handy application to manage music in events, based on public review.
+A handy application to manage login systems for organizations.
 
 ## Installation
 
@@ -15,13 +15,6 @@ npm install
 To make all services functional, you need to save configurations in a `.env` file. The file must contain the entires listed in `.env.sample` file
 
 ```
-
-# Store details about database connections
-DB_USER=someUser
-DB_PASS=mySecurePassword
-DB_HOST=localhost:27017
-DB_NAME=myDbNane
-
 # Store details about application
 PORT=3000
 ...
