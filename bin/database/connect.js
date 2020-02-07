@@ -13,14 +13,11 @@ class Database {
 
   _connect() {
     mongoose
-      .connect(
-        `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}?${process.env.DB_PARAM}`,
-        {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-          useFindAndModify: false,
-        },
-      )
+      .connect(process.env.DB_CONNECTION_STRING, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+      })
       .then(() => {
         logger.info('Database Connected');
       })
